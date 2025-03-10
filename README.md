@@ -1,6 +1,6 @@
 # Check your Balance
 
-1. Find out your principal id:
+1. Find out your principal id: o4zg2-f3qwj-dcqen-wtu3c-s2ugs-lt46g-qvp3z-k7htk-ywyba-mtzcr-vae
 
 ```
 dfx identity get-principal
