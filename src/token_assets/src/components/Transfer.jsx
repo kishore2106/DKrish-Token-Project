@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import { token } from "../../../declarations/token";
+import { token, cansterId, createActor } from "../../../declarations/token";
 import { Principal } from "@dfinity/principal";
+import { AuthClient } from "@dfinity/auth-client";
+import { canisterId } from "../../../declarations/token/index";
 
 function Transfer() {
 
@@ -11,12 +13,26 @@ function Transfer() {
   const [hidden, setHidden] = useState(true);
 
   async function handleClick() {
+    setFeedback (true);
     setDisabled(true);
     const recipient = Principal.fromText(recipientId)
     const amount = Number (toAmount)
+
+    // Uncomment the below part lines to when you deploy in the Live Server 
+    // const authClient = await AuthClient.create();
+    // const identity = authClient.getIdentity();
+    // const authenticatedCanister = createActor(canisterId, {
+    //   agentOptions: {
+    //     identity,
+    //   },
+    // });
+    // const result = await authenticatedCanister.transfer(recipient, amount);
+
+    // Use when locally executed else comment the below line
     const result = await token.transfer(recipient, amount);
     setFeedback(result);
     setHidden(false);
+    setDisabled(false);
   }
 
   return (

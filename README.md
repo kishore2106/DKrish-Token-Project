@@ -32,6 +32,9 @@ The project consists of two main directories:
 - **Balance.jsx:** Allows users to check their token balance.
 - **Transfer.jsx:** Facilitates token transfers between accounts.
 
+### Authentication
+The project uses **DFINITY's Internet Identity** for authentication. The authentication flow is managed using `@dfinity/auth-client`.
+
 ## How to Run the Project
 
 ### Prerequisites
@@ -194,6 +197,8 @@ dfx canister --network ic id token_assets
 ```
 7. Copy the id from step 6 and add .raw.ic0.app to the end to form a URL.
 e.g. zdv65-7qaaa-aaaai-qibdq-cai.raw.ic0.app
+
+#### Note: If you wanna Deploy on the Live Server the part of code should be commented and uncommented [**Transfer.jsx** & **Faucet.jsx**]
 
 ## Roadmap
 
