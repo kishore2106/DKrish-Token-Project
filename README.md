@@ -29,7 +29,7 @@ dfx canister call token balanceOf "( $OWNER_PUBLIC_KEY )"
 # Charge the Canister
 
 
-1. Check canister ID:
+1. Check canister ID: 2vxsx-fae
 ```
 dfx canister id token
 ```
